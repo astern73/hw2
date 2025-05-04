@@ -150,7 +150,9 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+Movie.all.order(:year_released).each do |movie|
+    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.studio.name}"
+  end
 
 # Prints a header for the cast output
 puts ""
@@ -159,4 +161,8 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
-# TODO!
+Movie.all.order(:year_released).each do |movie|
+    movie.roles.each do |role|
+      puts "#{movie.title} #{role.actor.name} #{role.character_name}"
+    end
+  end
