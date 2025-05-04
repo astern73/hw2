@@ -158,7 +158,7 @@ Movie.all.order(:year_released).each do |movie|
 puts ""
 puts "Top Cast"
 puts "========"
-puts ""
+puts "" 
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 Movie.all.order(:year_released).each do |movie|
